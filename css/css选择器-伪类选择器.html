@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 被选中的元素的一种状态 */
+    /* div:not(.demo1) {
+      background-color: red;
+    }
+    div:not([class]) {
+      background-color: red;
+    }
+    div:not(:last-of-type) {
+      background-color: #333;
+    } */
+
+    /* 根标签选择器 html环境中等价于html */
+    :root{
+      background-color: black;
+    }
+    /* html{
+      background-color: black;
+    } */
+
+    div:target{
+      border: 1px solid red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="demo1">1</div>
+  <div class="demo2">2</div>
+  <div class="demo3">3</div>
+  <div class="demo4">4</div>
+  <div>没有class的选择器</div>
+
+  <a href="#box1">box1</a>
+  <a href="#box2">box2</a>
+  <div id="box1">box1</div>
+  <div id="box2">box2</div>
+</body>
+</html>
