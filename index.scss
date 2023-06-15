@@ -1,0 +1,48 @@
+$count: 400;
+$sqrt: 20;
+$per: 101% / $sqrt;
+$postion: 1/($sqrt - 1) * 100%;
+
+@for $i from 1 to ($count + 1) {
+    @property --m-#{$i} {
+       syntax: "<number>";
+       initial-value: 1;
+       inherits: false;
+    }
+}
+@function bgSet($n) {
+    $bg : radial-gradient(rgba(0, 0, 0, var(--m-1)), rgba(0, 0, 0, var(--m-1)));
+    @for $i from 2 through $n {         
+        $bg: $bg, radial-gradient(rgba(0, 0, 0, var(--m-#{$i})), rgba(0, 0, 0, var(--m-#{$i})));
+    }
+    @return $bg;
+}
+@function positionSet($n) {
+    $bgPosition: ();
+    @for $i from 0 through ($n) {   
+        @for $j from 0 through ($n - 1) {  
+            $bgPosition: $bgPosition, #{$i * $postion} #{$j * $postion};
+        }
+    }
+    @return $bgPosition;
+}
+@function transitionSet($n) {
+    $transition: --m-1 0.1s 0.1s;
+    @for $i from 1 through $n {   
+        $transition: $transition, --m-#{$i} #{100 + random(500)}ms #{($i / 50) * random(100)}ms;
+    }
+    @return $transition;
+}
+img {
+    margin: 100px;
+    mask: bgSet($count);
+    mask-size: $per $per;
+    mask-repeat: no-repeat;
+    mask-position: positionSet($sqrt); 
+    transition: transitionSet($count);
+}
+img:hover {
+    @for $i from 1 through $count {         
+        --m-#{$i}: 0;
+    }
+}
