@@ -1,0 +1,128 @@
+# Position
+
+## sticky
+
+```
+<div>
+  <dl>
+    <dt>A</dt>
+    <dd>Andrew w,k.t</dd>
+    <dd>Alice Smith</dd>
+    <dd>Alan Johnson</dd>
+    <dd>Anna Davis</dd>
+    <dd>Arthur Miller</dd>
+    <dd>Amy Wilson</dd>
+    <dd>Albert Thompson</dd>
+    <dd>Angela Taylor</dd>
+    <dd>Anthony Anderson</dd>
+    <dd>Audrey Thomas</dd>
+  </dl>
+  <dl>
+    <dt>B</dt>
+    <dd>Blue w,k.t</dd>
+    <dd>Bob Brown</dd>
+    <dd>Bill Green</dd>
+    <dd>Benjamin White</dd>
+    <dd>Barbara Harris</dd>
+    <dd>Bradley Jackson</dd>
+    <dd>Brenda Thompson</dd>
+    <dd>Brian Taylor</dd>
+    <dd>Brittany Anderson</dd>
+    <dd>Brandon Thomas</dd>
+  </dl>
+  <dl>
+    <dt>C</dt>
+    <dd>Charlie Davis</dd>
+    <dd>Chris Martin</dd>
+    <dd>Catherine Zeta</dd>
+    <dd>Carol White</dd>
+    <dd>Carl Harris</dd>
+    <dd>Christina Jackson</dd>
+    <dd>Christopher Thompson</dd>
+    <dd>Cheryl Taylor</dd>
+    <dd>Charles Anderson</dd>
+    <dd>Cynthia Thomas</dd>
+  </dl>
+  <dl>
+    <dt>C</dt>
+    <dd>Charlie Davis</dd>
+    <dd>Chris Martin</dd>
+    <dd>Catherine Zeta</dd>
+    <dd>Carol White</dd>
+    <dd>Carl Harris</dd>
+    <dd>Christina Jackson</dd>
+    <dd>Christopher Thompson</dd>
+    <dd>Cheryl Taylor</dd>
+    <dd>Charles Anderson</dd>
+    <dd>Cynthia Thomas</dd>
+    <dd>Clara Wilson</dd>
+    <dd>Calvin Johnson</dd>
+    <dd>Camilla Brown</dd>
+    <dd>Caleb Miller</dd>
+    <dd>Candice White</dd>
+  </dl>
+  <dl>
+    <dt>D</dt>
+    <dd>David Moore</dd>
+    <dd>Daniel Lewis</dd>
+    <dd>Diana Clark</dd>
+    <dd>Daisy Wilson</dd>
+    <dd>Dylan Johnson</dd>
+    <dd>Deborah Brown</dd>
+    <dd>Dominic Miller</dd>
+    <dd>Donna White</dd>
+    <dd>Dennis Harris</dd>
+    <dd>Danielle Jackson</dd>
+    <dd>Derek Thompson</dd>
+    <dd>Dorothy Taylor</dd>
+    <dd>Douglas Anderson</dd>
+    <dd>Drake Thomas</dd>
+  </dl>
+  <dl>
+    <dt>F</dt>
+    <dd>Frank Davis</dd>
+    <dd>Fiona Martin</dd>
+    <dd>Fred Zeta</dd>
+    <dd>Felicity White</dd>
+    <dd>Francis Harris</dd>
+    <dd>Faith Jackson</dd>
+    <dd>Fernando Thompson</dd>
+    <dd>Florence Taylor</dd>
+    <dd>Frederick Anderson</dd>
+    <dd>Faye Thomas</dd>
+    <dd>Finn Wilson</dd>
+    <dd>Felicity Johnson</dd>
+    <dd>Francine Brown</dd>
+    <dd>Fergus Miller</dd>
+    <dd>Frida White</dd>
+  </dl>
+</div>
+```
+
+```
+ <style>
+  div {
+    width: 90%;
+    margin: 100px auto;
+    border: 1px solid red;
+    height: 400px;
+    overflow: auto;
+  }
+  dt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: aqua;
+    position: sticky;
+    top: 0;
+  }
+  dd {
+    border-bottom: 1px solid #ddd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+</style>
+```
+
+设置了 position: sticky 的元素。当 top 到达预设的值时会产生一个粘附的效果。这个 top 默认是相对于视口或者离他最近的设置了 overflow 的父元素
